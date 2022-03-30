@@ -28,20 +28,20 @@ if ($isLoggedIn) {
 <body>
     <!-- Header -->
     <header>
-        <a href="index.php">
+        <a href="../index.php">
             <h1>Re-branded Gallery</h1>
         </a>
         <nav>
-            <a href="index.php">Home</a>
-            <a href="pages/gallery.php">Gallery</a>
-            <a href="pages/about.php">About</a>
-            <a href="pages/contact.php">Contact</a>
+            <a href="../index.php">Home</a>
+            <a href="../pages/gallery.php">Gallery</a>
+            <a href="../pages/about.php">About</a>
+            <a href="../pages/contact.php">Contact</a>
         </nav>
         <!-- This will shift depending on if the session is logged in or not-->
         <?php if ($isLoggedIn) { ?>
-        <a href="php/logout.php" class="userA">Logout</a>
+        <a href="logout.php" class="userA">Logout</a>
         <?php } else { ?>
-        <a href="php/login.php" class="userA">Login</a>
+        <a href="login.php" class="userA">Login</a>
         <?php } ?>
     </header>
 
