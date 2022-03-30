@@ -1,0 +1,44 @@
+/* Make sure that it's THE header */
+header{
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background-color: rgba(var(--clr-tint1-rgb), 0.8);
+
+    padding-inline:3em;
+    padding-block:1em;
+}
+
+/* For all a tags */
+header a{
+    color: var(--clr-font-primary);
+    text-decoration: none;
+    font-weight:bold;
+}
+
+header nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+
+    margin-right:auto;
+    margin-left:10em;
+
+    width:25%;
+
+}
+
+
+header .userA{
+    margin-right:6em;
+
+    color: var(--clr-font-accent);
+
+    /* Button styles */
+    border: 1px solid var(--clr-accent);
+    border-radius: 3px;
+    padding: 0.5em 1.5em;
+}

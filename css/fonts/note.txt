@@ -1,0 +1,1 @@
+If fonts need to be applied. TTF, WOFF, WOFF2, etc should be placed in this directory.

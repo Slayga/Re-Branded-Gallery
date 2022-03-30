@@ -1,0 +1,29 @@
+/* Import all stylesheets in current directory */
+@import url("pages/header.css");
+@import url("pages/main.css");
+@import url("pages/footer.css");
+/* Media query for color scheme preference */
+/* @media screen and (prefers-color-scheme: dark) {
+  @import url("dark.css");
+}
+@media screen and (prefers-color-scheme: light) {
+  @import url("light.css");
+} */
+@import url("dark.css");
+/*  */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: var(--clr-font-primary);
+    line-height: 1.5;
+
+    min-width: 100%;
+    min-height: 100vh;
+}

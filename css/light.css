@@ -1,0 +1,39 @@
+:root{
+    /* Light Color Scheme (Based on 'Swan', the  bird)*/
+    --clr-primary:#f0eff0;
+    --clr-secondary:#d5d4d5;
+    --clr-accent:#a56d04;
+    --clr-tint1:#cccdd2;
+    --clr-tint2:#8c8c96;
+    /* Font Colors */
+    --clr-font-primary:#312d2e;
+    --clr-font-secondary:#171516;
+    --clr-font-accent:#dd443f;
+    /* Inverted is for example dark background */
+    --clr-font-inverted:#ececf8;
+    /* Normal colors, these can be modified to change the UX.
+     Example a white color with a small % of --clr-primary */
+    --white-rgb:236, 236, 248;
+    --black-rgb:21, 19, 24;
+    --grey-light-rgb:133, 137, 149;
+    --grey-medium-rgb:133, 137, 149;
+    --grey-dark-rgb:177, 173, 181;
+    
+    /* RGB codes of all hex values to be combined with rgba */
+    --clr-primary-rgb:240, 239, 240;
+    --clr-secondary-rgb:213, 212, 213;
+    --clr-accent-rgb:165, 109, 4;
+    --clr-tint1-rgb:204, 205, 210;
+    --clr-tint2-rgb:140, 140, 150;
+
+    --clr-font-primary-rgb:49, 45, 46;
+    --clr-font-secondary-rgb:23, 21, 22;
+    --clr-font-accent-rgb:221, 68, 63;
+    --clr-font-inverted-rgb:236, 236, 248;
+
+    --white-rgb:236, 236, 248;
+    --black-rgb:21, 19, 24;
+    --grey-light-rgb:133, 137, 149;
+    --grey-medium-rgb:133, 137, 149;
+    --grey-dark-rgb:177, 173, 181;
+    }
