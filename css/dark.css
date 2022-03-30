@@ -1,39 +1,39 @@
-:root{
+:root {
     /* Dark Color Scheme  (Based on 'greylag goose', yes the bird)*/
-    --clr-primary:#9ca0b0;
-    --clr-secondary:#70707f;
-    --clr-accent:#b85830;
-    --clr-tint1:#c8cbd5;
-    --clr-tint2:#a8afba;
+    --clr-primary: #9ca0b0;
+    --clr-secondary: #70707f;
+    --clr-accent: #b85830;
+    --clr-tint1: #c8cbd5;
+    --clr-tint2: #a8afba;
     /* Font Colors */
-    --clr-font-primary:#1d1e24;
-    --clr-font-secondary:#0f1016;
-    --clr-font-accent:#dd443f;
+    --clr-font-primary: #1d1e24;
+    --clr-font-secondary: #0f1016;
+    --clr-font-accent: #dd443f;
     /* Inverted is for example light background */
-    --clr-font-inverted:#dde8f3;
+    --clr-font-inverted: #dde8f3;
     /* Normal colors, these can be modified to change the UX.
      Example a white color with a small % of --clr-primary */
-    --white:#e9edf1;
-    --black:#161216;
-    --grey-light:#8f8d8f;
-    --grey-medium:#7a7e85;
-    --grey-dark-rgb:#4a4e55;
-    
+    --white: #e9edf1;
+    --black: #161216;
+    --grey-light: #8f8d8f;
+    --grey-medium: #7a7e85;
+    --grey-dark: #4a4e55;
+
     /* RGB codes of all hex values to be combined with rgba*/
-    --clr-primary-rgb:156, 160, 176;
-    --clr-secondary-rgb:112, 112, 127;
-    --clr-accent-rgb:184, 88, 48;
-    --clr-tint1-rgb:200, 203, 213;
-    --clr-tint2-rgb:168, 175, 186;
+    --clr-primary-rgb: 156, 160, 176;
+    --clr-secondary-rgb: 112, 112, 127;
+    --clr-accent-rgb: 184, 88, 48;
+    --clr-tint1-rgb: 200, 203, 213;
+    --clr-tint2-rgb: 168, 175, 186;
 
-    --clr-font-primary-rgb:47, 48, 56;
-    --clr-font-secondary-rgb:15, 16, 22;
-    --clr-font-accent-rgb:125, 164, 255;
-    --clr-font-inverted-rgb:221, 232, 243;
+    --clr-font-primary-rgb: 47, 48, 56;
+    --clr-font-secondary-rgb: 15, 16, 22;
+    --clr-font-accent-rgb: 125, 164, 255;
+    --clr-font-inverted-rgb: 221, 232, 243;
 
-    --white-rgb:233, 237, 241;
-    --black-rgb:22, 18, 22;
-    --grey-light-rgb:143, 141, 143;
-    --grey-medium-rgb:122, 126, 133;
-    --grey-dark-rgb-rgb:74, 78, 85;
-    }
+    --white-rgb: 233, 237, 241;
+    --black-rgb: 22, 18, 22;
+    --grey-light-rgb: 143, 141, 143;
+    --grey-medium-rgb: 122, 126, 133;
+    --grey-dark-rgb-rgb: 74, 78, 85;
+}
