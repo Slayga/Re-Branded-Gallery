@@ -1,6 +1,6 @@
 <!-- Get absolute path to directory in php -->
 <?php 
-$dir = dirname(__FILE__);
+$dir = dirname(__DIR__);
 ?>
 
 <header>
