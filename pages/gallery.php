@@ -1,5 +1,5 @@
 <!-- Require auth.php -->
-<?php require_once("auth.php"); ?>
+<?php require_once("../php/auth.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,29 +32,6 @@
     </header>
 
     <main>
-        <!-- Get all images from img/gallery and place them in a 3*x grid-->
-        <?php
-        $dir = dirname(__FILE__);
-        $files = scandir($dir . "/img/gallery");
-        $files = array_diff($files, array('.', '..'));
-        $count = count($files);
-        $cols = 3;
-        $rows = ceil($count / $cols);
-        ?>
-        <!-- Display all the images in random order -->
-        <?php for ($i = 0; $i < $rows; $i++) : ?>
-        <div class="row">
-            <?php for ($j = 0; $j < $cols; $j++) : ?>
-            <?php $index = $i * $cols + $j; ?>
-            <?php if ($index < $count) : ?>
-            <div class="col">
-                <img src="../img/gallery/<?= $files[$index] ?>" alt="">
-            </div>
-            <?php endif; ?>
-            <?php endfor; ?>
-        </div>
-        <?php endfor; ?>
-
 
     </main>
 

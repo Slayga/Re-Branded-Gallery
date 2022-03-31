@@ -2,6 +2,7 @@
 @import url("pages/header.css");
 @import url("pages/main.css");
 @import url("pages/footer.css");
+
 @import url("fonts/fonts.css");
 /* Media query for color scheme preference */
 /* @media screen and (prefers-color-scheme: dark) {
@@ -14,7 +15,9 @@
 
 /* Just general styling for everything*/
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -36,22 +39,28 @@ body {
     min-width: 100%;
     min-height: 100vh;
 
-    /* To display content correctly*/
+    /* To place content correctly*/
     display: grid;
-    grid-template-areas: "header""main""footer";
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
     grid-template-rows: auto minmax(80vh, 1fr) auto;
     grid-template-columns: 1fr;
 }
 
-header, .header {
+header,
+.header {
     grid-area: header;
 }
 
-main, .main {
+main,
+.main {
     grid-area: main;
 }
 
-footer, .footer {
+footer,
+.footer {
     grid-area: footer;
 }
 

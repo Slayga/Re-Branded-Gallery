@@ -1,4 +1,5 @@
-footer, .footer {
+footer,
+.footer {
     display: flex;
 
     background-color: var(--grey-dark);
@@ -10,7 +11,13 @@ footer, .footer {
     color: var(--clr-font-inverted);
 }
 
-footer .left__split {}
+footer .left__split {
+    width: 50%;
+}
+
+footer .right__split {
+    width: 50%;
+}
 
 footer footer .socials a {
     text-decoration: none;
