@@ -10,5 +10,5 @@ $username = "";
 $userId = "";
 $isLoggedIn = false;
 // Redirect to home
-header("Location: ../index.php");
+header("Location: ../");
 ?>

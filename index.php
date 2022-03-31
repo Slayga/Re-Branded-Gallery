@@ -19,11 +19,11 @@
 <body>
     <!-- Header, sticky. Nested: h1, nav & logout or login button-->
     <header>
-        <a href="index.php">
-            <h1>Re-branded Gallery</h1>
+        <a href="./">
+            <h1 class="hero">Re-Branded Gallery</h1>
         </a>
         <nav>
-            <a href="index.php">Home</a>
+            <a href="./">Home</a>
             <a href="pages/gallery.php">Gallery</a>
             <a href="pages/about.php">About</a>
             <a href="pages/contact.php">Contact</a>
@@ -43,8 +43,35 @@
 
     <!-- Footer always at bottom of page -->
     <footer>
-        <!-- All rights reserved for Re-Branded-->
-        <p>&copy; Re-branded Gallery <?=date('Y')?> | All rights reserved</p>
+        <div class="left__split">
+            <!-- Socials -->
+            <nav class="socials">
+                <a href="https://www.facebook.com/rebrandedgallery/" target="_blank">
+                    <img src="img/socials/facebook-512px.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/rebrandedgallery/" target="_blank">
+                    <img src="img/socials/instagram-512px.png" alt="Instagram">
+                </a>
+                <a href="https://www.pinterest.com/rebrandedgallery/" target="_blank">
+                    <img src="img/socials/pinterest-512px.png" alt="Pinterest">
+                </a>
+                <a href="https://www.twitter.com/rebrandedgallery/" target="_blank">
+                    <img src="img/socials/twitter-512px.png" alt="Twitter">
+                </a>
+            </nav>
+            <!-- All rights reserved for Re-Branded-->
+            <p>&copy; Re-branded Gallery <?=date('Y')?> | All rights reserved</p>
+        </div>
+        <div class="right__split">
+            <!-- Links to internal pages -->
+            <nav>
+                <a href="./">Home</a>
+                <a href="pages/gallery.php">Gallery</a>
+                <a href="pages/about.php">About</a>
+                <a href="pages/contact.php">Contact</a>
+                <a href="pages/cookies.php">Cookies</a>
+            </nav>
+        </div>
     </footer>
 </body>
 

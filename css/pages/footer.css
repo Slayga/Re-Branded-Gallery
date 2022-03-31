@@ -1,5 +1,23 @@
-footer {
+footer, .footer {
+    display: flex;
+
     background-color: var(--grey-dark);
     padding-inline: 3em;
     padding-block: 1em;
+
+    min-height: 50vh;
+
+    color: var(--clr-font-inverted);
+}
+
+footer .left__split {}
+
+footer footer .socials a {
+    text-decoration: none;
+
+}
+
+footer .socials img {
+    width: 3em;
+    height: 3em;
 }

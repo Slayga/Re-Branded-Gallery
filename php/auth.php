@@ -72,11 +72,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["username"] = $userInfo["username"];
             $_SESSION["level"] = $userInfo["level"];
             // If the form has been submitted and evaluated
-            header("Location: ../index.php");
+            header("Location: ../");
         }
         // If the username or password was incorrect send back to login page
         else {
-            header("Location: login.php");
+
+            header("Location: login.php?error=401");
         }
     } 
     // Logout form
@@ -90,6 +91,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     
 }
-
 
 ?>

@@ -3,7 +3,7 @@
 <?php
 // Check if user is logged in, then redirect back to home.
 if ($isLoggedIn) {
-    header("Location: ../index.php");
+    header("Location: ../");
 }
 ?>
 
@@ -28,11 +28,11 @@ if ($isLoggedIn) {
 <body>
     <!-- Header -->
     <header>
-        <a href="../index.php">
-            <h1>Re-branded Gallery</h1>
+        <a href="../">
+            <h1 class="hero">Re-branded Gallery</h1>
         </a>
         <nav>
-            <a href="../index.php">Home</a>
+            <a href="../">Home</a>
             <a href="../pages/gallery.php">Gallery</a>
             <a href="../pages/about.php">About</a>
             <a href="../pages/contact.php">Contact</a>
@@ -53,6 +53,12 @@ if ($isLoggedIn) {
             <input type="password" name="password" placeholder="Password" required>
             <input type="submit" value="login" name="login">
         </form>
+        <?php // if (isset($error)){if($error === "401") echo "Bad Login";} ?>
+        <!-- Echo Bad Login on error code 401 from GET -->
+        <?php if (isset($_GET['error'])) {if ($_GET['error'] === "401") { 
+                echo "<span class='error'>Bad Login</span>";
+            } 
+        } ?>
         <div class="redirect">
             <p>Not a member? <a href="signup.php">Signup</a></p>
         </div>

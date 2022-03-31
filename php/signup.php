@@ -13,17 +13,17 @@
 
     <!-- Styling -->
     <link rel="stylesheet" href="../css/style.css">
-    <title>Home | Re-branded Gallery |</title>
+    <title>Signup | Re-branded Gallery |</title>
 </head>
 
 <body>
     <!-- Header -->
     <header>
-        <a href="../index.php">
-            <h1>Re-branded Gallery</h1>
+        <a href="../">
+            <h1 class="hero">Re-branded Gallery</h1>
         </a>
         <nav>
-            <a href="../index.php">Home</a>
+            <a href="../">Home</a>
             <a href="../pages/gallery.php">Gallery</a>
             <a href="../pages/about.php">About</a>
             <a href="../pages/contact.php">Contact</a>
@@ -39,6 +39,12 @@
     <main>
 
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <!-- All rights reserved for Re-Branded-->
+        <p>&copy; Re-branded Gallery <?=date('Y')?> | All rights reserved</p>
+    </footer>
 </body>
 
 </html>
