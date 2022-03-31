@@ -41,13 +41,20 @@
         $cols = 3;
         $rows = ceil($count / $cols);
         ?>
-        <div class="gallery">
-            <?php for ($i = 0; $i < $count; $i++) { ?>
-            <div class="gallery-item">
-                <img src="img/gallery/<?= $files[$i] ?>" alt="">
+        <!-- Display all the images in random order -->
+        <?php for ($i = 0; $i < $rows; $i++) : ?>
+        <div class="row">
+            <?php for ($j = 0; $j < $cols; $j++) : ?>
+            <?php $index = $i * $cols + $j; ?>
+            <?php if ($index < $count) : ?>
+            <div class="col">
+                <img src="../img/gallery/<?= $files[$index] ?>" alt="">
             </div>
-            <?php } ?>
+            <?php endif; ?>
+            <?php endfor; ?>
         </div>
+        <?php endfor; ?>
+
 
     </main>
 
