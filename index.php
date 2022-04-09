@@ -44,7 +44,7 @@
     <!-- Footer always at bottom of page -->
     <footer>
         <div class="left__split">
-            <!-- Socials -->
+            <!-- Social links -->
             <nav class="socials">
                 <a href="https://www.facebook.com/rebrandedgallery/" target="_blank">
                     <img src="img/socials/facebook-512px.png" alt="Facebook">

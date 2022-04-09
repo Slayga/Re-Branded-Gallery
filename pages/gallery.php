@@ -32,7 +32,6 @@
     </header>
 
     <main>
-
     </main>
 
     <!-- Footer like index.php -->

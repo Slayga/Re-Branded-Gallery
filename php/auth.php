@@ -18,6 +18,19 @@ function extraSalt($username, $password ){
     return md5($username.$password.$salt);
 }
 
+function sanitize(){
+    $args = func_get_args();
+    $sanitizedArgs = array();
+    foreach($args as $arg){
+        $sanitizedArgs[] = mysqli_real_escape_string($arg);
+    }
+    // If array only has one element, return that element instead of the array.
+    if(count($sanitizedArgs) == 1){
+        return $sanitizedArgs[0];
+    }
+    return $sanitizedArgs;
+}
+
 
 // This will check if the current session is already logged in
 $username = $_SESSION["username"] ?? "";
