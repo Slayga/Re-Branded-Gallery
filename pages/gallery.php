@@ -8,14 +8,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Gallery | Re-branded Gallery |</title>
 </head>
 
 <body>
     <!-- Create header like index.php -->
     <header>
         <a href="../">
-            <h1 class="hero">Re-branded Gallery</h1>
+            <h1 class="hero">Re-Branded Gallery</h1>
         </a>
         <nav>
             <a href="../">Home</a>
@@ -25,9 +31,9 @@
         </nav>
         <!-- This will shift depending on if the session is logged in or not-->
         <?php if ($isLoggedIn) { ?>
-        <a href="logout.php" class="userA">Logout</a>
+        <a href="../php/logout.php" class="userA">Logout</a>
         <?php } else { ?>
-        <a href="login.php" class="userA">Login</a>
+        <a href="../php/login.php" class="userA">Login</a>
         <?php } ?>
     </header>
 

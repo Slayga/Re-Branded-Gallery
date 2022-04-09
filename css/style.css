@@ -21,6 +21,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 /* Hero font */
@@ -42,10 +43,9 @@ body {
     /* To place content correctly*/
     display: grid;
     grid-template-areas:
-        "header"
         "main"
         "footer";
-    grid-template-rows: auto minmax(80vh, 1fr) auto;
+    grid-template-rows: minmax(100h, 1fr) auto;
     grid-template-columns: 1fr;
 }
 

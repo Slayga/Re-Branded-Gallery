@@ -13,35 +13,56 @@
 
     <!-- Styling -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Script -->
+    <script src="js/app.js" defer></script>
+
     <title>Home | Re-branded Gallery |</title>
 </head>
 
 <body>
-    <!-- Header, sticky. Nested: h1, nav & logout or login button-->
-    <header>
-        <a href="./">
-            <h1 class="hero">Re-Branded Gallery</h1>
-        </a>
-        <nav>
-            <a href="./">Home</a>
-            <a href="pages/gallery.php">Gallery</a>
-            <a href="pages/about.php">About</a>
-            <a href="pages/contact.php">Contact</a>
-        </nav>
-        <!-- This will shift depending on if the session is logged in or not-->
-        <?php if ($isLoggedIn) { ?>
-        <a href="php/logout.php" class="userA">Logout</a>
-        <?php } else { ?>
-        <a href="php/login.php" class="userA">Login</a>
-        <?php } ?>
-    </header>
-
     <!-- Main content -->
     <main>
+        <section class="front">
+            <div class="wrapper">
+                <h2>Re-Branded Gallery</h2>
+                <i>Made by <strong>Gabriel Engberg</strong></i>
+                <a href="#about" class="continue">
+                    <span class="arrow"></span>
+                    <span class="arrow"></span>
+                    <span class="arrow"></span>
+                </a>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+        </section>
+
+        <section class=" get-started">
+            <!-- Shift between signup and upload, depending on the session -->
+            <?php if ($isLoggedIn) { ?>
+            <!-- Some anchor tag to gallery.php or upload page -->
+            <a href=""></a>
+            <?php } else { ?>
+            <a href="pages/signup.php" class="signup">Signup</a>
+            <?php } ?>
+        </section>
+
+        <section class="contact">
+            <!-- Contact form split into two parts: info and form. -->
+            <div class="left__split">
+                <!-- Info about contact -->
+                <h2>Contact</h2>
+            </div>
+            <div class="right__split">
+                <!-- Contact form -->
+                <h2>Contact form</h2>
+            </div>
+        </section>
 
     </main>
 
-    <!-- Footer always at bottom of page -->
+    <!-- Footer with socials and internal links -->
     <footer>
         <div class="left__split">
             <!-- Social links -->
@@ -59,7 +80,7 @@
                     <img src="img/socials/twitter-512px.png" alt="Twitter">
                 </a>
             </nav>
-            <!-- All rights reserved for Re-Branded-->
+            <!-- All rights reserved for Re-Branded -->
             <p>&copy; Re-branded Gallery <?=date('Y')?> | All rights reserved</p>
         </div>
         <div class="right__split">

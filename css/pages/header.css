@@ -1,39 +1,42 @@
-/* Make sure that it's THE header */
-header{
-    position:relative;
+:root {
+    --header-height: 8vh;
+}
 
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+/* Make sure that it's THE header */
+header {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     background-color: rgba(var(--clr-tint1-rgb), 0.8);
 
-    padding-inline:3em;
-    padding-block:1em;
+    padding-inline: 3em;
+    padding-block: 1em;
 }
 
-/* For all a tags */
-header a{
+/* For all anchor tags */
+header a {
     color: var(--clr-font-primary);
     text-decoration: none;
-    font-weight:bold;
+    font-weight: bold;
 }
 
-header nav{
-    display:flex;
-    align-items:center;
-    justify-content:space-evenly;
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 
-    margin-right:auto;
-    margin-left:10em;
+    margin-right: auto;
+    margin-left: 10em;
 
-    width:25%;
+    width: 25%;
 
 }
 
-
-header .userA{
-    margin-right:6em;
+header .userA {
+    margin-right: 6em;
 
     color: var(--clr-font-accent);
 
