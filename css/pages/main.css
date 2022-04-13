@@ -28,7 +28,7 @@ main .front::before {
     background-image: url("../../img/front.JPG");
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.85;
+    opacity: 0.75;
 }
 
 main .front h2 {
