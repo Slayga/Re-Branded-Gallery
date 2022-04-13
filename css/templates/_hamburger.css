@@ -26,5 +26,5 @@ body {
 
 .hamburger__container input {
     z-index: 5;
-    opacity: 0;
+    /* opacity: 0; */
 }

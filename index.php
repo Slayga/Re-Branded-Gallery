@@ -29,8 +29,6 @@
                 <i>Made by <strong>Gabriel Engberg</strong></i>
                 <a href="#about" class="continue">
                     <span class="arrow"></span>
-                    <span class="arrow"></span>
-                    <span class="arrow"></span>
                 </a>
             </div>
         </section>
