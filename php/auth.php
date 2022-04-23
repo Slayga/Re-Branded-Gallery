@@ -38,7 +38,7 @@ $userId = $_SESSION["userId"] ?? "";
 $isLoggedIn = $_SESSION["loggedIn"] ?? false;
 
 // On submitting a post form
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Signup form
     if (isset($_POST["signup"]) && isset($_POST["username"]) && isset($_POST["password"])) {
         // For local calls in file
@@ -63,8 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["username"] = $userInfo["username"];
                 $_SESSION["level"] = $userInfo["level"];
             }
-        } 
-
+        }
     }
     // Login form
     else if (isset($_POST["login"]) && isset($_POST["username"]) && isset($_POST["password"])) {
@@ -101,8 +100,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     else{
         // If no form is submitted??Wut then
         // How is that possible??
+        header("Location: error.php?error=500");
     }
     
 }
-
 ?>
