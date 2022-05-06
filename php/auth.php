@@ -18,19 +18,6 @@ function extraSalt($username, $password ){
     return md5($username.$password.$salt);
 }
 
-function sanitize(){
-    $args = func_get_args();
-    $sanitizedArgs = array();
-    foreach($args as $arg){
-        $sanitizedArgs[] = mysqli_real_escape_string($arg);
-    }
-    // If array only has one element, return that element instead of the array.
-    if(count($sanitizedArgs) == 1){
-        return $sanitizedArgs[0];
-    }
-    return $sanitizedArgs;
-}
-
 
 // This will check if the current session is already logged in
 $username = $_SESSION["username"] ?? "";
@@ -104,4 +91,45 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
     
 }
+?>
+
+<?php 
+// ======= //
+// Rewrite //
+// ======= //
+
+// Start session
+session_start();
+function defalut_session_vars(){
+    // Set global variables depending on session
+    global $username;
+    global $userId;
+    global $isLoggedIn;
+    $username = $_SESSION["username"] ?? "";
+    $userId = $_SESSION["userId"] ?? "";
+    $isLoggedIn = $_SESSION["loggedIn"] ?? false;
+
+}
+// Function to call when logging in
+function loginForm($username, $password){
+    // Connect to database
+    $connection = sqlConnect("anamazinggallery");
+    // Escape username and password
+    $username = mysqli_real_escape_string($connection, $username);
+    $password = mysqli_real_escape_string($connection, $password);
+    // Select all users with username and password
+    $sqlSelect = "SELECT * FROM tblusers WHERE username='$username' AND password='$password'";
+    // If there is one user with that username and password
+    if (mysqli_num_rows(mysqli_query($connection, $sqlSelect)) === 1){
+        // Then login the user
+        $userInfo = mysqli_fetch_assoc(mysqli_query($connection, $sqlSelect));
+        $isLoggedIn = true;
+        $_SESSION["loggedIn"] = true;
+        $_SESSION["userId"] = $userInfo["userId"];
+        $_SESSION["username"] = $userInfo["username"];
+        
+
+
+
+
 ?>

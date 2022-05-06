@@ -21,6 +21,7 @@
 </head>
 
 <body>
+    </header>
     <!-- Main content -->
     <main>
         <section class="front">
