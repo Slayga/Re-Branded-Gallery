@@ -1,4 +1,5 @@
 <?php
+
 /**
  * DbCon (Database Connection) instantiates a new connection to the database.
  */
@@ -97,7 +98,7 @@ class DbCtrl extends DbCon {
         $password = password_hash($password, PASSWORD_DEFAULT);
 
         // Find exact username and password, check that only 1 is found
-        $stmt = $this->db->prepare("SELECT * FROM tblusers WHERE username = ? AND password = ?");
+        $stmt = $this->conn->prepare("SELECT * FROM tblusers WHERE username = ? AND password = ?");
         $stmt->bind_param("ss", $username, $password);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -164,24 +165,19 @@ class DbCtrl extends DbCon {
         }
     }
 }
-
 /**
- * 
+ * LoginUser is a class that handles the login process at low level hierarchy
  */
 class LoginUser {
-    public function __construct($username, $password, $db) {
-        return $this->login($username, $password, $db);
-    }
-
-    private function login($username, $password, $db) {
-        $result = $db->loginUser($username, $password);
-        if ($result["error"]) {
-            return $result["message"];
-        } else {
-            return $result["result"];
-        }
+    public function __construct($username, $password) {    
+        global $dbCtrl;
+        $this->dbCtrl = $dbCtrl;
+        $this->result = $this->dbCtrl->loginUser($username, $password);
     }
 }
+
+$dbCtrl = new DbCtrl("test");
+print_r(new LoginUser("testL", "test"));
 
 // https://www.youtube.com/watch?v=BaEm2Qv14oU
 
